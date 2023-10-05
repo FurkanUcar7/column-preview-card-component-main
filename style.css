@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+:root {
+--Bright-orange: hsl(31, 77%, 52%);
+--Dark-cyan: hsl(184, 100%, 22%);
+--Very-dark-cyan: hsl(179, 100%, 13%);
+--Transparent-white: hsla(0, 0%, 100%, 0.75);
+--Very-light-gray: hsl(0, 0%, 95%);
+--font-family-big-should: 'Big Shoulders Display', cursive;
+--font-family-Lexend: 'Lexend Deca', sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    border-radius: 10px;
+}
+.card{
+    width: 315px;
+    padding: 45px;
+}
+
+.card img{
+    width: 75px;
+    height: 50px;
+}
+
+.sedans{
+    background-color: var(--Bright-orange);
+    border-radius: 10px 0 0 10px;
+}
+.suvs{
+    background-color: var(--Dark-cyan);
+}
+.luxury{
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0 10px 10px 0;
+}
+.card h1{
+    color: var(--Very-light-gray);
+    font-family: var(--font-family-big-should);
+    font-size: 48px;
+    font-weight: 700;
+}
+.card p{
+    color: var(--Transparent-white);
+    font-family: var(--font-family-Lexend);
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    width: 80%;
+}
+button{
+    border: 2px solid var(--Very-light-gray);
+    border-radius: 25px;
+    font-size: 16px;
+    padding: 15px 45px;
+    cursor: pointer;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    font-family: var(--font-family-Lexend);
+}
+button:active
+{
+    background-color: transparent;
+}
+.sedans button{
+    color: var(--Bright-orange);
+}
+.suvs button{
+    color: var(--Dark-cyan);
+}
+.luxury button{
+    color: var(--Very-dark-cyan);
+}
+.sedans button:active, .suvs button:active, .luxury button:active{
+    color: var(--Very-light-gray);
+}
+
+@media (max-width: 480px) {
+    main{
+        flex-direction: column;
+    }
+    .sedans{
+        border-radius: 10px 10px 0 0;
+    }
+    .luxury{
+        border-radius: 0 0 10px 10px;
+    }
+}
